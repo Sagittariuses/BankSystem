@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace BankSystem.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для ComparisonOfDepositsPage.xaml
-    /// </summary>
     public partial class ComparisonOfDepositsPage : Page
     {
         public ComparisonOfDepositsPage()

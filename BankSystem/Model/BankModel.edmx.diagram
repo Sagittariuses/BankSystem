@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c340198ce5b345e3b029a9ca4491baed" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.BankAccount" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Contract" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.History" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Type" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.User" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_BankAccount_Type_TypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_BankAccount_User_UserID" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Contract_BankAccount_NumberAccount" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_History_BankAccount_NumberAccount" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Contract_User_UserID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

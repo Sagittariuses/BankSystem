@@ -47,5 +47,6 @@
                     ShadowDepth="4"/>
             </Label.Effect>
         </Label>
+        
     </Grid>
 </Window>

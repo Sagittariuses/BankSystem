@@ -23,6 +23,9 @@ namespace BankSystem.Pages
         public DepositCalculatorPage()
         {
             InitializeComponent();
+            StableIncomeLB.Content = 1000;
+            OptimalIncomeLB.Content = 30;
+            StandartIncomeLB.Content = 0;
         }
 
         private void CompareParmsBTN_Click(object sender, RoutedEventArgs e)
@@ -35,6 +38,39 @@ namespace BankSystem.Pages
                     (window as MainWindow).MainFrame.Navigate(comparisonOfDepositsPage);
                 }
             }
+        }
+
+        private void SumTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            StableIncomeLB.Content = SumTB.Text;
+        }
+
+        private void SumSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (SumSlider.Value == 1E+7)
+                StableIncomeLB.Content = 10000000;
+            else
+                StableIncomeLB.Content = ((float)(SumSlider.Value));
+        }
+
+        private void TermTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            OptimalIncomeLB.Content = TermTB.Text;
+        }
+
+        private void TermSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            OptimalIncomeLB.Content = (int)(TermSlider.Value);
+        }
+
+        private void MonthlyRepleminshlerTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            StandartIncomeLB.Content = MonthlyRepleminshlerTB.Text;
+        }
+
+        private void MonthlyRepleminshlerSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            StandartIncomeLB.Content = (double)((float)(MonthlyRepleminshlerSlider.Value));
         }
     }
 }

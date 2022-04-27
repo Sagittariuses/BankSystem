@@ -47,12 +47,10 @@
                     />
                 <Label 
                     x:Name="StableIncomeLB"
-                    Content="Nums" 
                     HorizontalAlignment="Left" 
                     VerticalAlignment="Top"
                     Margin="20,54,0,0"
                     FontSize="20"
-                    Foreground="LightGray"
                     FontFamily="Calibri" 
                     Width="150"
                     Background="{x:Null}"
@@ -87,12 +85,10 @@
                     />
                 <Label 
                     x:Name="OptimalIncomeLB"
-                    Content="Nums" 
                     HorizontalAlignment="Left" 
                     VerticalAlignment="Top"
-                    Margin="20,55,0,0"
+                    Margin="21,55,0,0"
                     FontSize="20"
-                    Foreground="LightGray"
                     FontFamily="Calibri" 
                     Width="150"
                     Background="{x:Null}"
@@ -117,7 +113,7 @@
                 Margin="0,30,0,40">
 
                 <Label 
-                    Content="Оптимальный" 
+                    Content="Стандарт" 
                     HorizontalAlignment="Left" 
                     VerticalAlignment="Top"
                     Margin="20,0,0,0"
@@ -127,12 +123,10 @@
                     />
                 <Label 
                     x:Name="StandartIncomeLB"
-                    Content="Nums" 
                     HorizontalAlignment="Left" 
                     VerticalAlignment="Top"
                     Margin="20,55,0,0"
                     FontSize="20"
-                    Foreground="LightGray"
                     FontFamily="Calibri" 
                     Width="150"
                     Background="{x:Null}"
@@ -187,6 +181,7 @@
                     FontFamily="Calibri" Height="34" Width="66" 
                     />
                 <TextBox 
+                    x:Name="SumTB"
                     HorizontalAlignment="Left" 
                     Height="24" 
                     FontSize="20"
@@ -198,7 +193,9 @@
                     TextWrapping="Wrap" 
                     FontFamily="Calibri" 
                     Width="370"
-                    />
+                    TextChanged="SumTB_TextChanged"
+                    
+                />
                 <Label 
                     Content="Руб." 
                     HorizontalAlignment="Right" 
@@ -209,11 +206,17 @@
                     Width="50" Height="34"
                     />
                 <Slider 
+                    x:Name="SumSlider"
                     HorizontalAlignment="Left" 
                     Margin="20,70,0,0" 
                     VerticalAlignment="Top" 
                     Width="370"
-                    Ticks="1000, 1000000,5000000,10000000"/>
+                    Maximum="10000000"
+                    Minimum="1000"
+                    TickPlacement="Both" 
+                    Ticks="1000,1000000,5000000,10000000"
+                    ValueChanged="SumSlider_ValueChanged"
+                    />
             </Grid>
             <Grid 
                 Background="White" 
@@ -230,6 +233,7 @@
                     FontFamily="Calibri" Height="34" Width="66" 
                     />
                 <TextBox 
+                    x:Name="TermTB"
                     HorizontalAlignment="Left" 
                     Height="24" 
                     FontSize="20"
@@ -241,6 +245,7 @@
                     TextWrapping="Wrap" 
                     FontFamily="Calibri" 
                     Width="370"
+                    TextChanged="TermTB_TextChanged"
                     />
                 <Label 
                     Content="дней" 
@@ -252,11 +257,15 @@
                     Width="53" Height="34"
                     />
                 <Slider 
+                    x:Name="TermSlider"
                     HorizontalAlignment="Left" 
                     Margin="20,70,0,0" 
                     VerticalAlignment="Top" 
                     Width="370"
-                    Ticks="1, 12,24,60"/>
+                    Minimum="30"
+                    Maximum="1800"
+                    Ticks="30, 365,730,1800"
+                    ValueChanged="TermSlider_ValueChanged"/>
             </Grid>
             <Grid 
                 Background="White" 
@@ -273,6 +282,7 @@
                     FontFamily="Calibri" Height="34" Width="252" 
                     />
                 <TextBox 
+                    x:Name="MonthlyRepleminshlerTB"
                     HorizontalAlignment="Left" 
                     Height="24" 
                     FontSize="20"
@@ -284,6 +294,7 @@
                     TextWrapping="Wrap" 
                     FontFamily="Calibri" 
                     Width="370"
+                    TextChanged="MonthlyRepleminshlerTB_TextChanged"
                     />
                 <Label 
                     Content="Руб." 
@@ -295,11 +306,15 @@
                     Width="50" Height="34"
                     />
                 <Slider 
+                    x:Name="MonthlyRepleminshlerSlider"
                     HorizontalAlignment="Left" 
                     Margin="20,70,0,0" 
                     VerticalAlignment="Top" 
                     Width="370"
-                    Ticks="0, 2500000,5000000"/>
+                    Minimum="0"
+                    Maximum="5000000"
+                    Ticks="0, 2500000,5000000"
+                    ValueChanged="MonthlyRepleminshlerSlider_ValueChanged"/>
             </Grid>
 
         </StackPanel>
